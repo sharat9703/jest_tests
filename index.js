@@ -24,14 +24,14 @@ async function get_one(reqBody) {
 
 async function create_(reqBody) {
   try {
-    
+
     const response = await axios.post(
       `http://localhost:8000/api/customer`,
       reqBody
     );
     return response;
   } catch (error) {
-    // console.log(error.message);
+    // console.log(error);
     if (error.response) {
       return { status: error.response.status };
     } else {
@@ -52,7 +52,7 @@ async function update_(reqBody) {
     );
     return response;
   } catch (error) {
-    // console.log(error.message);
+    // console.log(error);
     throw error;
   }
 }
@@ -64,7 +64,7 @@ async function delete_(reqBody) {
     );
     return response;
   } catch (error) {
-    // console.log(error.message);
+    // console.log(error);
     if (error.response) {
       return { status: error.response.status };
     } else {
