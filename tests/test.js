@@ -104,7 +104,7 @@ describe("API End Points PUT tests", () => {
       expect(response.statusText).toBe("OK");
       expect(response.data.message).toBe("customer updated successfully");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       throw error; 
     }
   });
@@ -135,7 +135,7 @@ describe("API End Point DELETE tests", () => {
       expect(response.statusText).toBe("OK");
       expect(response.data.message).toBe("customer deleted successfully");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       throw error; 
     }
   });
@@ -149,7 +149,7 @@ describe("API End Point DELETE tests", () => {
       
       expect(response.status).toBe(404);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       expect(error.response.status).toBe(404);
     }
   });
