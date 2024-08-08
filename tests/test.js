@@ -105,7 +105,7 @@ describe("API End Points PUT tests", () => {
       expect(response.data.message).toBe("customer updated successfully");
     } catch (error) {
       console.log(error.message);
-      throw error; // Rethrow to fail the test
+      throw error; 
     }
   });
 
@@ -117,7 +117,6 @@ describe("API End Points PUT tests", () => {
         email: "newguest@gmail.com",
       };
       const response = await update_(reqBody);
-      // This should not be reached if an error is thrown
       expect(response.status).toBe(404);
     } catch (error) {
       expect(error.response.status).toBe(404);
@@ -137,7 +136,7 @@ describe("API End Point DELETE tests", () => {
       expect(response.data.message).toBe("customer deleted successfully");
     } catch (error) {
       console.log(error.message);
-      throw error; // Rethrow to fail the test
+      throw error; 
     }
   });
 
@@ -147,7 +146,7 @@ describe("API End Point DELETE tests", () => {
         cust_id: 999,
       };
       const response = await delete_(reqBody);
-      // This should not be reached if an error is thrown
+      
       expect(response.status).toBe(404);
     } catch (error) {
       console.log(error);
